@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZipZap – Simple ZIP Extractor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fdf9f3;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #fff7e6;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .upload-box {
+      background: #f1e9dc;
+      border-radius: 1rem;
+      border: 2px dashed #a68b6b;
+      width: 90%;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .upload-box::before {
+      content: "📦📦📦";
+      font-size: 4rem;
+      position: absolute;
+      opacity: 0.05;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    input[type="file"] {
+      margin-top: 1rem;
+    }
+    .ads-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+      background: #fefcf8;
+    }
+    .ad-box {
+      width: calc(20% - 1rem);
+      min-width: 150px;
+      height: 150px;
+      background: #ddd;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .ad-box {
+        width: calc(50% - 1rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZipZap</h1>
+    <p>Extract your ZIP files quickly and easily</p>
+  </header>
+  <main>
+    <div class="upload-box">
+      <h2>Upload ZIP file</h2>
+      <input type="file" id="zipFile" accept=".zip" multiple />
+      <p>Drop your ZIP files here or click to browse</p>
+    </div>
+  </main>
+  <section class="ads-container">
+    <div class="ad-box">Ad 1</div>
+    <div class="ad-box">Ad 2</div>
+    <div class="ad-box">Ad 3</div>
+    <div class="ad-box">Ad 4</div>
+    <div class="ad-box">Ad 5</div>
+    <div class="ad-box">Ad 6</div>
+    <div class="ad-box">Ad 7</div>
+    <div class="ad-box">Ad 8</div>
+    <div class="ad-box">Ad 9</div>
+    <div class="ad-box">Ad 10</div>
+  </section>
+</body>
+</html>
